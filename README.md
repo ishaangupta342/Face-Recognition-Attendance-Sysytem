@@ -27,6 +27,6 @@ Instructions
 1) First run the command pip install -r requirements.txt in commandprompt terminal after opening the folder.
 2) Then run the app.py file.
 3) Then go to the link appearing in the terminal.
-4) For more details watch the tutorial.
+4) For more details watch the tutorial https://youtu.be/6Sx0Nq1ADBw.
 
 
