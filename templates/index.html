@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </head>
+  <body>
+    
+    <div class="hero-section">	
+		
+		<div class="section-center">
+			<div class="container-fluid">
+				<div class="row justify-content-center">
+					<div class="col-12 text-center">
+						<h1>Face Recognition Attendance System Web Application </h1>
+					</div>
+                    <br>
+					<div class="col-12 text-center mb-2">
+						<div class="dancing"> <br>-Ishaan Gupta<br><br>
+                       </div>
+					</div><br>
+					
+					<div class="col-12 text-center mt-4 mt-lg-5">
+						
+					</div>
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-12 text-center">
+								<img src="{{ url_for('video_feed') }}" width="40%">
+							</div>
+							<div><a href="http://127.0.0.1:5000/result" target="_blank"><button> Mark Attendance </button></a></div><br>
+							<table border=2>
+								{% for key in result %}
+								   <tr>
+									   
+									   <th>{{ key }}</th>
+									   
+							   
+								   </tr>  
+								 {% endfor %}
+							   </table>
+
+				</div>
+			</div>
+		</div>
+	</div>	
+	
+	
+	
+	
+	
+	
+	
+	<div class='cursor' id="cursor"></div>
+	<div class='cursor2' id="cursor2"></div>
+	<div class='cursor3' id="cursor3"></div>
+
+<!-- Link to page
+================================================== -->
+<script>
+    
+(function($) { "use strict";
+		
+        //Page cursors
+    
+        document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n) {
+            t.style.left = n.clientX + "px", 
+            t.style.top = n.clientY + "px", 
+            e.style.left = n.clientX + "px", 
+            e.style.top = n.clientY + "px", 
+            i.style.left = n.clientX + "px", 
+            i.style.top = n.clientY + "px"
+        });
+        var t = document.getElementById("cursor"),
+            e = document.getElementById("cursor2"),
+            i = document.getElementById("cursor3");
+        function n(t) {
+            e.classList.add("hover"), i.classList.add("hover")
+        }
+        function s(t) {
+            e.classList.remove("hover"), i.classList.remove("hover")
+        }
+        s();
+        for (var r = document.querySelectorAll(".hover-target"), a = r.length - 1; a >= 0; a--) {
+            o(r[a])
+        }
+        function o(t) {
+            t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
+        }
+    
+        
+        //About page
+        
+        $(".about-text").on('click', function () {
+            $("body").addClass("about-on");
+        });
+        $(".about-close").on('click', function () {
+            $("body").removeClass("about-on");
+        });
+    
+        
+        //Contact page
+        
+        $(".contact-text").on('click', function () {
+            $("body").addClass("contact-on");
+        });
+        $(".contact-close").on('click', function () {
+            $("body").removeClass("contact-on");
+        });
+    
+        
+        //Travel portfolio page
+        
+        $(".travel").on('click', function () {
+            $("body").addClass("travel-on");
+        });
+        $(".travel-close").on('click', function () {
+            $("body").removeClass("travel-on");
+        });
+    
+        
+        //Wildlife portfolio page
+        
+        $(".wildlife").on('click', function () {
+            $("body").addClass("wildlife-on");
+        });
+        $(".wildlife-close").on('click', function () {
+            $("body").removeClass("wildlife-on");
+        });
+    
+        
+        //Nature portfolio page
+        
+        $(".nature").on('click', function () {
+            $("body").addClass("nature-on");
+        });
+        $(".nature-close").on('click', function () {
+            $("body").removeClass("nature-on");
+        });
+    
+        
+    })(jQuery); 
+</script>
+    </body>
+
+
+</html>

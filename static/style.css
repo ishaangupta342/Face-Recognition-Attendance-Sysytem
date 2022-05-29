@@ -1,0 +1,275 @@
+body {
+    background-color: coral;
+}
+tr{
+    font-size: 5px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #1f2029;
+    overflow: hidden;
+    height: 100vh;
+    -webkit-transition: all 300ms linear;
+    transition: all 300ms linear;
+    perspective: 800px;
+}
+a {
+    cursor: pointer;
+}
+a:hover {
+    text-decoration: none;
+}
+::selection {
+    color: #c4c3ca;
+    background-color: #000;
+}
+::-moz-selection {
+    color: #c4c3ca;
+    background-color: #000;
+}
+
+/* #Cursor
+================================================== */
+
+.cursor,
+.cursor2,
+.cursor3{
+    position: fixed;
+    border-radius: 50%;	
+    transform: translateX(-50%) translateY(-50%);
+    pointer-events: none;
+    left: -100px;
+    top: 50%;
+    mix-blend-mode: difference;
+    -webkit-transition: all 300ms linear;
+    transition: all 300ms linear;
+}
+.cursor{
+    background-color: #fff;
+    height: 0;
+    width: 0;
+    z-index: 99999;
+}
+.cursor2,.cursor3{
+    height: 36px;
+    width: 36px;
+    z-index:99998;
+    -webkit-transition:all 0.3s ease-out;
+    transition:all 0.3s ease-out
+}
+.cursor2.hover,
+.cursor3.hover{
+    -webkit-transform:scale(2) translateX(-25%) translateY(-25%);
+    transform:scale(2) translateX(-25%) translateY(-25%);
+    border:none
+}
+.cursor2{
+    border: 2px solid #fff;
+}
+.cursor2.hover{
+    background: rgba(255,255,255,1);
+    border-color: transparent;
+}
+
+@media screen and (max-width: 1200px){
+    .cursor,.cursor2,.cursor3{
+        display: none
+    }
+}
+
+/* #Primary style
+================================================== */
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    height: 100vh;
+    background-image: url("image.jpg");
+    background-size: cover;
+    background-position: center;
+    transform: scale(1) rotateX(0);
+    box-shadow: 0 0 40px rgba(0,0,0,0.2);
+    -webkit-transition: all 300ms linear;
+    transition: all 300ms linear;
+    -webkit-transition-delay: 400ms;
+    transition-delay: 400ms;
+    transform-origin: center top;
+}
+.hero-section h1{
+    color: #fff;
+    font-size: 5vw;
+    line-height: 1;
+    font-weight: 900;
+}
+.hero-section .dancing{
+    font-family: 'Dancing Script', cursive;
+    letter-spacing: 1px;
+    color: #ffffff;
+    font-size: 26px;
+    line-height: 1;
+    font-weight: 700;
+}
+@media screen and (max-width: 580px){
+    .hero-section .dancing{
+        font-size: 18px;
+    }
+}
+.hero-section p{
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.hero-section p span{
+    margin-left: 15px;
+    margin-right: 15px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding-bottom: 35px;
+}
+.hero-section p span:before {
+    position: absolute;
+    content: '';
+    bottom: 10px;
+    left: 50%;
+    height: 30px;
+    width: 30px;
+    margin-left: -15px;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px 30px;
+    background-image: url('http://www.ivang-design.com/svg-load/portfolio/down.svg');
+    opacity: 0.2;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.hero-section p span:hover:before {
+    opacity: 1;
+    bottom: 5px;
+}
+
+body.about-on .hero-section {
+    transform: scale(0.75);
+    -webkit-transition-delay: 0ms;
+    transition-delay: 0ms;
+}
+body.contact-on .hero-section {
+    transform: scale(0.75);
+    -webkit-transition-delay: 0ms;
+    transition-delay: 0ms;
+}
+body.travel-on .hero-section {
+    transform: rotateX(-10deg);
+    -webkit-transition-delay: 0ms;
+    transition-delay: 0ms;
+}
+body.wildlife-on .hero-section {
+    transform: rotateX(-10deg);
+    -webkit-transition-delay: 0ms;
+    transition-delay: 0ms;
+}
+body.nature-on .hero-section {
+    transform: rotateX(-10deg);
+    -webkit-transition-delay: 0ms;
+    transition-delay: 0ms;
+}
+
+button, button::after {
+   width: 300px;
+   height: 86px;
+   font-size: 50px;
+   font-family: 'Bebas Neue', cursive;
+   background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+   border: 0;
+   color: #fff;
+   letter-spacing: 3px;
+   line-height: 88px;
+   box-shadow: 6px 0px 0px #00E6F6;
+   outline: transparent;
+   position: relative;
+ }
+ 
+ button::after {
+   --slice-0: inset(50% 50% 50% 50%);
+   --slice-1: inset(80% -6px 0 0);
+   --slice-2: inset(50% -6px 30% 0);
+   --slice-3: inset(10% -6px 85% 0);
+   --slice-4: inset(40% -6px 43% 0);
+   --slice-5: inset(80% -6px 5% 0);
+   
+   content: 'PREDICT';
+   display: block;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+   text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+   clip-path: var(--slice-0);
+ }
+ 
+ button:hover::after {
+   animation: 1s glitch;
+   animation-timing-function: steps(2, end);
+ }
+ 
+ @keyframes glitch {
+   0% {
+     clip-path: var(--slice-1);
+     transform: translate(-20px, -10px);
+   }
+   10% {
+     clip-path: var(--slice-3);
+     transform: translate(10px, 10px);
+   }
+   20% {
+     clip-path: var(--slice-1);
+     transform: translate(-10px, 10px);
+   }
+   30% {
+     clip-path: var(--slice-3);
+     transform: translate(0px, 5px);
+   }
+   40% {
+     clip-path: var(--slice-2);
+     transform: translate(-5px, 0px);
+   }
+   50% {
+     clip-path: var(--slice-3);
+     transform: translate(5px, 0px);
+   }
+   60% {
+     clip-path: var(--slice-4);
+     transform: translate(5px, 10px);
+   }
+   70% {
+     clip-path: var(--slice-2);
+     transform: translate(-10px, 10px);
+   }
+   80% {
+     clip-path: var(--slice-5);
+     transform: translate(20px, -10px);
+   }
+   90% {
+     clip-path: var(--slice-1);
+     transform: translate(-10px, 0px);
+   }
+   100% {
+     clip-path: var(--slice-1);
+     transform: translate(0);
+   }
+}

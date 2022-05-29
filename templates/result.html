@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+  </head>
+
+<body>
+  <div class="hero-section">	
+  <h2>Final Results</h2>
+<table border=2>
+  <tr>
+    <th>Name</th>
+    <th>Date</th>
+    <th>Time</th>
+  </tr>
+ {% for name,datetime in zip(result_name, result_date) %}
+    <tr>
+      
+        <td>{{ name }}</td>
+        <td>{{ datetime[:10] }}</td>
+        <td>{{ datetime[11:20] }}</td>
+        
+    </tr>  
+  {% endfor %}
+</table>
+</div>
+</body>
+
+</html>
