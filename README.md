@@ -22,20 +22,11 @@ community that make adding new functionality easy.
 .. _Jinja: https://jinja.palletsprojects.com/
 
 
-Installing
+Instructions
 ----------
-
-Install and update using `pip`_:
-
-.. code-block:: text
-
-    $ pip install -U Flask
-
-.. _pip: https://pip.pypa.io/en/stable/getting-started/
-
-
-
-    $ flask run
-      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+1) First run the command pip install -r requiremwnts.txt in commandprompt terminal after opening the folder.
+2) Then run the app.py file.
+3) Then go to the link appearing in the terminal.
+4) For more details watch the tutorial.
 
 
