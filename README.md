@@ -1,6 +1,9 @@
 # Face-Recognition-Attendance-Sysytem
-Microsoft Engage Project
-Flask
+## Microsoft Engage Project
+![WhatsApp Image 2022-05-29 at 9 52 31 PM](https://user-images.githubusercontent.com/105964208/170880479-f263d80b-48a4-4178-b555-e8e8263168eb.jpeg)
+
+
+## Flask
 =====
 
 Flask is a lightweight `WSGI`_ web application framework. It is designed
@@ -31,21 +34,6 @@ Install and update using `pip`_:
 .. _pip: https://pip.pypa.io/en/stable/getting-started/
 
 
-A Simple Example
-----------------
-
-.. code-block:: python
-
-    # save this as app.py
-    from flask import Flask
-
-    app = Flask(_name_)
-
-    @app.route("/")
-    def hello():
-        return "Hello, World!"
-
-.. code-block:: text
 
     $ flask run
       * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
